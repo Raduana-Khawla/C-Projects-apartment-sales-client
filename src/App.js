@@ -5,31 +5,40 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AuthProvider from './context/AuthProvider/AuthProvider';
 import Home from './Pages/Home/Home/Home';
-// import Login from './Pages/Login/Login/Login';
-// import Register from './Pages/Login/Register/Register';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
+import Footer from './Pages/Shared/Footer/Footer';
+import Menubar from './Pages/Shared/Menubar/Menubar';
+import NotFound from './NotFound/NotFound';
 
 function App() {
   return (
     <div className="App">
-      {/* <AuthProvider> */}
+      <AuthProvider>
         <Router>
+        <Menubar/>
           <Switch>
             <Route path="/home">
               <Home/>
             </Route>
-            {/* <Route path="/login">
+            <Route path="/login">
               <Login />
             </Route>
             <Route path="/register">
               <Register />
-            </Route> */}
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="*">
+          <NotFound></NotFound>
+        </Route>
           </Switch>
+        <Footer />
         </Router>
-      {/* </AuthProvider> */}
+      </AuthProvider>
     </div>
   );
 }

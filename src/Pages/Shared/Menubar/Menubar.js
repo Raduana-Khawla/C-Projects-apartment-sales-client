@@ -5,9 +5,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@material-ui/menu';
 import { Link, NavLink } from 'react-router-dom';
-import useAuth from './../../../hooks/useAuth';
+import useAuth from '../../../hooks/useAuth';
+import logo from '../../../images/logo-removebg-preview.png'
 
 const Menubar = () => {
     const { user, logout } = useAuth();
@@ -22,12 +23,21 @@ const Menubar = () => {
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
+                        {/* <MenuIcon></MenuIcon> */}
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Doctors Portal
-                    </Typography>
-                    <Link to="/appointment"><Button color="inherit">Appointment</Button></Link>
+                    <div><img className="d-inline-block align-top rounded-circle"
+                    src={logo}
+                    alt="First slide"
+                    width="100"
+                    height="80"
+                  /> </div>
+                    <div> <h3>Apartment Sales</h3></div>
+                    <Typography>
+                    {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                      Apartment Sales */}
+                    </Typography> 
+                    <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/home"><Button color="inherit">Home</Button></NavLink>
+                    <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/notFound"><Button color="inherit">NotFound</Button></NavLink>
                     {
                         user?.email ?
                             <Box>
@@ -39,8 +49,7 @@ const Menubar = () => {
                             :
                             <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
                                 <Button color="inherit">Login</Button>
-                            </NavLink>
-                    }
+                            </NavLink>}
                 </Toolbar>
             </AppBar>
         </Box>
