@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-// import MenuIcon from '@material-ui/menu';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo-removebg-preview.png'
@@ -23,15 +22,14 @@ const Menubar = () => {
                         aria-label="menu"
                         sx={{ mr: 2 }}
                     >
-                        {/* <MenuIcon></MenuIcon> */}
                     </IconButton>
-                    <div><img className="d-inline-block align-top rounded-circle"
+                    <img className="d-inline-block align-top rounded-circle"
                     src={logo}
                     alt="First slide"
                     width="100"
                     height="80"
-                  /> </div>
-                    <div> <h3>Apartment Sales</h3></div>
+                  />
+                  <h5 className="text-dark">Noor Construction</h5>
                     <Typography>
                     {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                       Apartment Sales */}

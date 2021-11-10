@@ -1,65 +1,99 @@
-import { faFacebook, faInstagram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faCommentDots, faHome, faPlus,faPlane } from '@fortawesome/free-solid-svg-icons';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookSquare,
+  faInstagramSquare,
+  faTwitterSquare,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faCoffee,
+  faPhoneVolume,
+  faMapMarkedAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-    return (
-        <footer className="py-3">
-            <div className="container">
-                <div className="row d-flex justify-content-center align-items-center text-white">
-                    <div className="col-md-4 d-flex bg-dark p-3 rounded">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} style={{fontSize:'40px'}} />
-                        <p className="ms-2 fw-bolder">House-37,�Road-13/Ranavola Avenue,�Sector-10,Uttara</p>
-                    </div>
-                    <div className="col-md-4 ">
-                        <h4>Quick Links</h4>
-                        <div>
-                        <ul className="list-unstyled">
-                <li>
-                    <Link to="/" style={{textDecoration:'none'}} className="text-white">
-                        <FontAwesomeIcon icon={faHome} /> <span>Home</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/" style={{textDecoration:'none'}} className="text-white">
-                        <FontAwesomeIcon icon={faPlus} /> <span>Booking Package</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/" style={{textDecoration:'none'}} className="text-white">
-                    <FontAwesomeIcon icon={faPlane} /> <span>Packages</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/" style={{textDecoration:'none'}} className="text-white">
-                        <FontAwesomeIcon icon={faCommentDots} /> <span>Review</span>
-                    </Link>
-                </li>
-            </ul>
-       </div>
-    </div>
-    <div className="col-md-4">
-     <div className="rounded-circle p-5 color">
-        <h4>About Us</h4>
-        <p className="">All schedule/non-schedule domestic passenger flights and charter flights of Helicopter/General Aviation will remain suspended. Revised travel restrictions due COVID-19 pandemic. Mandatory 14 Days Institutional Quarantine for the Passengers Coming To Bangladesh.</p>
-     </div>
-        <br />
-        <div className='d-flex justify-content-evenly'    style={{fontSize:'2em'}}>
-           <FontAwesomeIcon icon={faFacebook}/>
-           <FontAwesomeIcon icon={faInstagram}/>
-           <FontAwesomeIcon icon={faTwitter}/>
-           <FontAwesomeIcon icon={faWhatsapp}/>
-         </div>
+  return (
+    <div>
+      <div className="footer-container footer1">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-5">
+              <div className="left-container text-start">
+                <h1>Biona Sports Club</h1>
+                <div className="icons-container d-flex text-center ">
+                  <div className="icon">
+                    <FontAwesomeIcon icon={faInstagramSquare} />
+                  </div>
+                  <div className="icon">
+                    <FontAwesomeIcon icon={faTwitterSquare} />
+                  </div>
+                  <div className="icon">
+                    <FontAwesomeIcon icon={faYoutube} />
+                  </div>
+                  <div className="icon">
+                    <FontAwesomeIcon icon={faFacebookSquare} />
+                  </div>
+                </div>
+                <p className="mt-4 ">
+                  <small>
+                    *These statements have not been evaluated by the Food and
+                    Drug Administration. These products are not intended to
+                    diagnose.
+                  </small>
+                </p>
+
+                <p className="mt-5">
+                  <small>Noor Construction © Appartment sales</small>
+                </p>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <div className="footer-menu-container">
+                <ul>
+                  <li className="footer-menu">Home</li>
+                  <li className="footer-menu">Services</li>
+                  <li className="footer-menu">Sports</li>
+                  <li className="footer-menu">Contact us</li>
+                  <li className="footer-menu"> About us</li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-md-5">
+              <div className="right-footer-container">
+                <h3>Sign up for the newsletter</h3>
+                <input
+                  className="footer-input"
+                  type="text"
+                  placeholder="Enter Email"
+                />
+                <div className="phone d-flex align-items-center justify-content-center mt-4">
+                  <div className="foter-phone-icon">
+                    <FontAwesomeIcon icon={faPhoneVolume} />
+                  </div>
+                  <div>
+                    <h5>+1 8 800 555 35 35</h5>
+                  </div>
+                </div>
+                <div className="map d-flex align-items-center justify-content-center">
+                  <div className="foter-phone-icon">
+                    <FontAwesomeIcon icon={faMapMarkedAlt} />
+                  </div>
+                  <div>
+                    <p>
+                      160 Broadway, New York, NY 10038,
+                      <br /> 102 1st Avenue, New York, NY 100
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
-     </div>
-    <p className="mb-0  text-center text-white">Tour and Travel © 2021</p>
-</footer>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

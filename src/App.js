@@ -11,7 +11,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Menubar from './Pages/Shared/Menubar/Menubar';
-import NotFound from './NotFound/NotFound';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
