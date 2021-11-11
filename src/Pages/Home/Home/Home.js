@@ -3,7 +3,7 @@ import Contact from "../../Contact/Contact";
 import Banner from "../../Shared/Banner/Banner";
 import Design from "../Design/Design";
 import Services from "../../Services/Services";
-import Propertys from "../../Propertys/Propertys";
+import Properties from "../../Properties/Properties";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Banner></Banner>
       <Design></Design>
       <Services></Services>
-      <Propertys></Propertys>
+      <Properties></Properties>
       <Contact></Contact>
     </div>
   );
