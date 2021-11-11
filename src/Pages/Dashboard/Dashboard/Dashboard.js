@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import "./Dashboard.css";
-// import Review from "./../Review/Review";
+import Review from "../../Review/Review";
 import MyBookings from "../../Dashboard/MyBookings/MyBookings";
 import MakeAdmin from "../../Dashboard/MakeAdmin/MakeAdmin";
 import useAuth from "../../../hooks/useAuth";
-import AddProperties from "../../AddProperties/AddProperties";
 import ManageOrder from "../ManageOrder/ManageOrder";
+import AddServices from "../../AddServices/AddServices";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
@@ -43,21 +43,22 @@ const Dashbaord = () => {
               <Link to={`${url}/review`}>
                 <li className="dashboard-menu mt-5">Review</li>
               </Link>
-              <div className="admin-dashboard">
-                <li className="dashboard-menu mt-5">Orders list</li>
+              {isAdmi && (
+                <div className="admin-dashboard">
+                  <li className="dashboard-menu mt-5">Orders list</li>
 
-                {isAdmi && (
-                  <Link to={`${url}/addService`}>
+                  <Link to={`${url}/addServices`}>
                     <li className="dashboard-menu">Add Service</li>
                   </Link>
-                )}
-                <Link to={`${url}/makeAdmin`}>
-                  <li className="dashboard-menu">Make Admin</li>
-                </Link>
-                <Link to={`${url}/manageServices`}>
-                  <li className="dashboard-menu">Manage Service</li>
-                </Link>
-              </div>
+
+                  <Link to={`${url}/makeAdmin`}>
+                    <li className="dashboard-menu">Make Admin</li>
+                  </Link>
+                  <Link to={`${url}/manageOrder`}>
+                    <li className="dashboard-menu">Manage Orders</li>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
           <div className="col-md-9">
@@ -65,17 +66,17 @@ const Dashbaord = () => {
               <Route exact path={path}>
                 <MyBookings></MyBookings>
               </Route>
-              {/* <Route exact path={`${path}/review`}>
+              <Route exact path={`${path}/review`}>
                 <Review></Review>
-              </Route> */}
+              </Route>
               <Route exact path={`${path}/BookingList`}>
                 <MyBookings></MyBookings>
               </Route>
               <Route exact path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>
               </Route>
-              <Route exact path={`${path}/addProperties`}>
-                <AddProperties></AddProperties>
+              <Route exact path={`${path}/addServices`}>
+                <AddServices></AddServices>
               </Route>
               <Route exact path={`${path}/manageOrder`}>
                 <ManageOrder></ManageOrder>

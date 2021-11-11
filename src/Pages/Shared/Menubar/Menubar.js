@@ -42,13 +42,13 @@ const Menubar = () => {
           </NavLink>
           <NavLink
             style={{ textDecoration: "none", color: "white" }}
-            to="/services"
+            to="/ServiceItems"
           >
             <Button color="inherit">Services</Button>
           </NavLink>
           <NavLink
             style={{ textDecoration: "none", color: "white" }}
-            to="/properties"
+            to="/services"
           >
             <Button color="inherit">Properties</Button>
           </NavLink>

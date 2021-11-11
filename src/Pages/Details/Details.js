@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
-
 const Details = () => {
-  const [property, setProperty] = useState({});
+  const [service, setService] = useState({});
   const { user } = useAuth();
-  const { propertyId } = useParams();
-  console.log(propertyId);
+  const { serviceId } = useParams();
+  console.log(serviceId);
 
   const {
     register,
@@ -30,9 +29,9 @@ const Details = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProperty/${propertyId}`)
+    fetch(`http://localhost:5000/singleService/${serviceId}`)
       .then((res) => res.json())
-      .then((data) => setProperty(data));
+      .then((data) => setService(data));
   }, []);
 
   return (
@@ -40,23 +39,23 @@ const Details = () => {
       <div className="details-container">
         <div className="row container">
           <div className="col-md-6">
-            <img className="w-50" src={property.imageURL} alt="" />
-            <p>{property?.description}</p>
-            <h1>{property?.name}</h1>
-            <h1> {property?.price}</h1>
+            <img className="w-50" src={service.imageURL} alt="" />
+            <p>{service?.description}</p>
+            <h1>{service?.name}</h1>
+            <h1> {service?.price}</h1>
           </div>
           <div className="col-md-6">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 {...register("name")}
                 placeholder="Name"
-                defaultValue={property?.name}
+                defaultValue={service?.name}
                 className="p-2 m-2 w-100 input-field"
               />
 
               <input
                 {...register("description")}
-                defaultValue={property?.description}
+                defaultValue={service?.description}
                 placeholder="Description"
                 className="p-2 m-2 w-100 input-field"
               />
@@ -64,14 +63,14 @@ const Details = () => {
               <input
                 {...register("image", { required: true })}
                 placeholder="Image Link"
-                defaultValue={property?.image}
+                defaultValue={service?.imageURL}
                 className="p-2 m-2 w-100 input-field"
               />
 
               <input
                 {...register("price", { required: true })}
                 placeholder="Price"
-                defaultValue={property?.price}
+                defaultValue={service?.price}
                 type="number"
                 className="p-2 m-2 w-100 input-field"
               />

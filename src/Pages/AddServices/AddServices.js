@@ -1,9 +1,9 @@
 import React from "react";
-import "./AddProperties.css";
+import "./AddServices.css";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 
-const AddProperties = () => {
+const AddServices = () => {
   const { user } = useAuth();
   const {
     register,
@@ -13,7 +13,7 @@ const AddProperties = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addProperties", {
+    fetch("http://localhost:5000/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -78,4 +78,4 @@ const AddProperties = () => {
   );
 };
 
-export default AddProperties;
+export default AddServices;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -9,22 +10,23 @@ const Services = () => {
   }, []);
   console.log(services);
   return (
-    <div className="py-5">
-      <div className="container">
-        <div className="text-center">
-          <span className="text-dark">OUR SERVICES</span>
-          <h2>Our All Services</h2>
-        </div>
-        <div className="row pt-3">
+    <div>
+      <h1>Services</h1>
+      <div className="services">
+        <div className="row container">
           {services?.map((pd, index) => (
-            <div className="col-md-4 col-sm-12">
-              <div className="card h-100 p-3">
-                <img className="w-100 h-50" src={pd?.imageURL} alt="Images" />
-                <h3>{pd.name}</h3>
+            <div className="col-md-6 col-lg-4">
+              <div className="service p-3 border border m-2">
+                <div className="service-img">
+                  <img className="w-50" src={pd?.imageURL} alt="" />
+                </div>
+                <h1>{pd.name}</h1>
                 <p>{pd.description}</p>
-                <a href="#" className="read-btn">
-                  Read More <i className="flaticon-right-arrow"></i>
-                </a>
+                <p>{pd.price}</p>
+                <Link to={`/service/${pd._id}`}>
+                  {" "}
+                  <button className="btn btn-success">Order Now</button>
+                </Link>
               </div>
             </div>
           ))}

@@ -8,9 +8,9 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Menubar from "./Pages/Shared/Menubar/Menubar";
 import NotFound from "./Pages/NotFound/NotFound";
 import Details from "./Pages/Details/Details";
-import AddProperties from "./Pages/AddProperties/AddProperties";
+import ServiceItems from "./Pages/ServiceItems/ServiceItems";
 import Services from "./Pages/Services/Services";
-import Properties from "./Pages/Properties/Properties";
+import AddServices from "./Pages/AddServices/AddServices";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 function App() {
@@ -26,17 +26,20 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
+            <Route path="/addServices">
+              <AddServices />
+            </Route>
+            <Route path="/serviceItems">
+              <ServiceItems />
+            </Route>
             <Route path="/services">
               <Services />
             </Route>
-            <Route path="/properties">
-              <Properties />
-            </Route>
-            <Route path="/properties/:propertyId">
+            <Route path="/service/:serviceId">
               <Details></Details>
             </Route>
-            <Route path="/addProperties">
-              <AddProperties></AddProperties>
+            <Route path="/addServices">
+              <AddServices></AddServices>
             </Route>
             <Route path="/dashboard">
               <Dashboard></Dashboard>
