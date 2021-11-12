@@ -1,86 +1,82 @@
 import React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import { Link, NavLink } from "react-router-dom";
+import "./Menubar.css";
+import { Link } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { HashLink } from "react-router-hash-link";
 import useAuth from "../../../hooks/useAuth";
 import logo from "../../../images/logo-removebg-preview.png";
 
 const Menubar = () => {
   const { user, logout } = useAuth();
+  console.log(user);
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          ></IconButton>
-          <img
-            className="d-inline-block align-top rounded-circle"
-            src={logo}
-            alt="First slide"
-            width="100"
-            height="80"
-          />
-          <h5 className="text-dark">Noor Construction</h5>
-          <Typography>
-            {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                      Apartment Sales */}
-          </Typography>
-          <NavLink
-            style={{ textDecoration: "none", color: "white" }}
-            to="/home"
-          >
-            <Button color="inherit">Home</Button>
-          </NavLink>
-          <NavLink
-            style={{ textDecoration: "none", color: "white" }}
-            to="/ServiceItems"
-          >
-            <Button color="inherit">Services</Button>
-          </NavLink>
-          <NavLink
-            style={{ textDecoration: "none", color: "white" }}
-            to="/services"
-          >
-            <Button color="inherit">Properties</Button>
-          </NavLink>
-          <NavLink
-            style={{ textDecoration: "none", color: "white" }}
-            to="/notFound"
-          >
-            <Button color="inherit">NotFound</Button>
-          </NavLink>
-          {user?.email ? (
-            <Box>
-              <NavLink
-                style={{ textDecoration: "none", color: "white" }}
-                to="/dashboard"
-              >
-                <Button color="inherit">Dashboard</Button>
-              </NavLink>
-              <Button onClick={logout} color="inherit">
+    <div>
+      <Navbar
+        className="p-3 bg-primary"
+        variant="dark"
+        sticky="top"
+        collapseOnSelect
+        expand="lg"
+      >
+        <Container>
+          <Navbar.Brand href="#home">
+            <div className="d-flex">
+              <img
+                className="d-inline-block align-top rounded-circle"
+                src={logo}
+                alt="First slide"
+                width="100"
+                height="60"
+              />{" "}
+              <div>
+                <span className="design">Noor Construction</span>
+              </div>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end">
+            <Nav.Link as={HashLink} to="/home">
+              <span id="color">Home</span>
+            </Nav.Link>
+            <Nav.Link as={HashLink} to="/serviceItems">
+              <span id="color">Services</span>
+            </Nav.Link>
+            <Nav.Link as={HashLink} to="/services">
+              <span id="color">Property</span>
+            </Nav.Link>
+
+            <Nav.Link as={HashLink} to="/dashboard">
+              <span id="color">
+                <button className="items btn btn-danger p-1 ">Deshboard</button>
+              </span>
+            </Nav.Link>
+            {user?.email ? (
+              <button onClick={logout} variant="light">
                 Logout
-              </Button>
-            </Box>
-          ) : (
-            <NavLink
-              style={{ textDecoration: "none", color: "white" }}
-              to="/login"
-            >
-              <Button color="inherit">Login</Button>
-            </NavLink>
-          )}
-        </Toolbar>
-      </AppBar>
-    </Box>
+              </button>
+            ) : (
+              <Nav.Link as={Link} to="/login">
+                <span id="color">Login</span>
+              </Nav.Link>
+            )}
+            <Nav.Link as={HashLink} to="/notFound">
+              <span id="color">NotFound</span>
+            </Nav.Link>
+            <Navbar.Text>
+              <span id="color">Signed in as:</span>{" "}
+              <a className="text-dark" href="#login">
+                {user?.displayName}
+              </a>{" "}
+              <br />
+              <a className="text-dark" href="#login">
+                {user?.email}
+              </a>{" "}
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 };
 

@@ -7,6 +7,7 @@ import MakeAdmin from "../../Dashboard/MakeAdmin/MakeAdmin";
 import useAuth from "../../../hooks/useAuth";
 import ManageOrder from "../ManageOrder/ManageOrder";
 import AddServices from "../../AddServices/AddServices";
+import BookProperty from "../BookProperty/BookProperty";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
@@ -32,7 +33,7 @@ const Dashbaord = () => {
           <div className="col-md-3 ">
             <div className="dashboard">
               <h5>Dashboard</h5>
-              <Link to={`${url}`}>
+              <Link to={`${url}/BookProperty`}>
                 <li className="dashboard-menu mt-5">Book</li>
               </Link>
 
@@ -71,6 +72,9 @@ const Dashbaord = () => {
               </Route>
               <Route exact path={`${path}/BookingList`}>
                 <MyBookings></MyBookings>
+              </Route>
+              <Route exact path={`${path}/BookProperty`}>
+                <BookProperty></BookProperty>
               </Route>
               <Route exact path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>

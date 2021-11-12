@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-5">
               <div className="left-container text-start">
-                <h1>Biona Sports Club</h1>
+                <h1>Noor Construction</h1>
                 <div className="icons-container d-flex text-center ">
                   <div className="icon">
                     <FontAwesomeIcon icon={faInstagramSquare} />
@@ -38,14 +38,13 @@ const Footer = () => {
                 </div>
                 <p className="mt-4 ">
                   <small>
-                    *These statements have not been evaluated by the Food and
-                    Drug Administration. These products are not intended to
-                    diagnose.
+                    SELLING? WE HAVE 1000's OF CLIENTS COMING TO VIEW PROPERTIES
+                    IN ALL AREAS AND PRICE RANGES ... get started now
                   </small>
                 </p>
 
                 <p className="mt-5">
-                  <small>Noor Construction © Appartment sales</small>
+                  <small>Noor Construction © 2021</small>
                 </p>
               </div>
             </div>
@@ -54,7 +53,7 @@ const Footer = () => {
                 <ul>
                   <li className="footer-menu">Home</li>
                   <li className="footer-menu">Services</li>
-                  <li className="footer-menu">Sports</li>
+                  <li className="footer-menu">Properties</li>
                   <li className="footer-menu">Contact us</li>
                   <li className="footer-menu"> About us</li>
                 </ul>
@@ -62,7 +61,7 @@ const Footer = () => {
             </div>
             <div className="col-md-5">
               <div className="right-footer-container">
-                <h3>Sign up for the newsletter</h3>
+                <h3>Sign up for the Modern Appartment</h3>
                 <input
                   className="footer-input"
                   type="text"
@@ -82,8 +81,8 @@ const Footer = () => {
                   </div>
                   <div>
                     <p>
-                      160 Broadway, New York, NY 10038,
-                      <br /> 102 1st Avenue, New York, NY 100
+                      1200 Gabtoli, Narsingdi, Dhaka.
+                      <br /> Dhaka,Narsingdi Shadar, Narsingdi.
                     </p>
                   </div>
                 </div>

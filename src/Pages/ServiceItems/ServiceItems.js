@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./ServiceItems.css";
 
 const ServiceItems = () => {
   const [serviceItems, setServiceItems] = useState([]);
@@ -9,25 +10,29 @@ const ServiceItems = () => {
   }, []);
   console.log(serviceItems);
   return (
-    <div className="py-5">
+    <div className="design1">
       <div className="container">
-        <div className="text-center">
-          <span className="text-dark">OUR ServiceItems</span>
-          <h2>Our All ServiceItems</h2>
-        </div>
-        <div className="row pt-3">
-          {serviceItems?.map((pd, index) => (
-            <div className="col-md-4 col-sm-12">
-              <div className="card h-100 p-3">
-                <img className="w-100 h-50" src={pd?.imageURL} alt="Images" />
-                <h3>{pd.name}</h3>
-                <p>{pd.description}</p>
-                <a href="#" className="read-btn">
-                  Read More <i className="flaticon-right-arrow"></i>
-                </a>
+        <div className="text-center py-5">
+          <span className="design4">OUR SERVICES</span>
+          <h2>Our All Services</h2>
+          <div className="row">
+            {serviceItems?.map((pd, index) => (
+              <div className="col-md-4 col-sm-12">
+                <div className="card p-3 design2">
+                  <img
+                    className="w-100 h-50 p-3"
+                    src={pd?.imageURL}
+                    alt="Images"
+                  />
+                  <h3 className="design4">{pd.name}</h3>
+                  <p className="design3">{pd.description}</p>
+                  <a href="#" className="read-btn">
+                    Read More <i className="flaticon-right-arrow"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

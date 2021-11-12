@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Alert } from "@mui/material";
 import { useForm } from "react-hook-form";
+
 const MakeAdmin = () => {
+  const [success, setSuccess] = useState(false);
   const { register, handleSubmit, watch, errors } = useForm();
 
   const onSubmit = (data) => {
@@ -10,7 +13,13 @@ const MakeAdmin = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => {
+        if (result.modifiedCount) {
+          console.log(result);
+          setSuccess(true);
+        }
+      });
+
     console.log(data);
   };
   return (
@@ -32,6 +41,7 @@ const MakeAdmin = () => {
           value="make as Admin"
         />
       </form>
+      {success && <Alert severity="success">Made Admin successfully!</Alert>}
     </div>
   );
 };

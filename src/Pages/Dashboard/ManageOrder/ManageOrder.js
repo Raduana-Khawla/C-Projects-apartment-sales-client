@@ -4,17 +4,18 @@ import { useForm } from "react-hook-form";
 
 const MangeOrder = () => {
   const [orders, setOrders] = useState([]);
-  const { register, handleSubmit } = useForm();
-
   const [status, setStatus] = useState("");
   const [orderId, setOrderId] = useState("");
+  const [control, setControl] = useState(false);
+
+  const { register, handleSubmit } = useForm();
 
   console.log(status);
   useEffect(() => {
     fetch("http://localhost:5000/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, []);
+  }, [control]);
 
   // const status = "apporved";
   const handleOrderId = (id) => {
@@ -32,7 +33,18 @@ const MangeOrder = () => {
       .then((res) => res.json())
       .then((result) => console.log(result));
   };
-
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount) {
+          setControl(!control);
+        }
+      });
+    console.log(id);
+  };
   return (
     <div className="container">
       <h1>All orders {orders.length}</h1>
@@ -68,8 +80,18 @@ const MangeOrder = () => {
                   <input type="submit" />
                 </form>
               </td>
-              <button className="btn bg-danger p-2">Delete</button>
-              <button className="btn bg-success p-2">Update</button>
+              <button
+                onClick={() => handleDelete(pd?._id)}
+                className="btn bg-danger p-2"
+              >
+                Delete
+              </button>
+              <button
+                onSubmit={handleSubmit(onSubmit)}
+                className="btn bg-success p-2"
+              >
+                Update
+              </button>
             </tr>
           </tbody>
         ))}

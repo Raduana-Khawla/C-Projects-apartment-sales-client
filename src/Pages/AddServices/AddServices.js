@@ -13,6 +13,7 @@ const AddServices = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    console.log(data);
     fetch("http://localhost:5000/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },

@@ -12,6 +12,7 @@ import ServiceItems from "./Pages/ServiceItems/ServiceItems";
 import Services from "./Pages/Services/Services";
 import AddServices from "./Pages/AddServices/AddServices";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import PersonReview from "./Pages/Review/PersonReview/PersonReview";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
             <Route path="/services">
               <Services />
             </Route>
+            <Route path="/personReview">
+              <PersonReview></PersonReview>
+            </Route>
             <Route path="/service/:serviceId">
               <Details></Details>
             </Route>
@@ -49,9 +53,6 @@ function App() {
             </Route>
             <Route path="/register">
               <Register />
-            </Route>
-            <Route exact path="/">
-              <Home />
             </Route>
             <Route exact path="*">
               <NotFound></NotFound>
