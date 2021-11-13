@@ -57,7 +57,12 @@ const PersonReview = (props) => {
             {Comments}
           </Typography>
           <span className="style">
-            <Rating initialRating={rating} readonly />
+            <div className="col-span-9">
+              <Rating
+                emptySymbol="far fa-star text-coral text-xl"
+                fullSymbol="fas fa-star text-coral text-xl"
+              ></Rating>
+            </div>
           </span>
         </CardContent>
       </Card>

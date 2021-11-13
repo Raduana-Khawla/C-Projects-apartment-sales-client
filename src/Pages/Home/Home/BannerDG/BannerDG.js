@@ -5,11 +5,17 @@ const BannerDG = () => {
   return (
     <div className="container display4 p-3">
       <div>
-        <h3 className="text-light">"Join, Let's Go To Bangladesh" !Group</h3>
+        <h3 className="text-light">
+          "Join, Let's Go To purchase a Property of !Noor Construction"
+        </h3>
         <p className="text-light">
-          Stay Updated about Bangladesh, see stunning photos of Bangladesh, meet
-          numerous travelers from around the world who have already visited
-          Bangladesh, and ask Bangladesh travel questions.
+          With a firm existence for more than three decades in the real estate
+          sector of Rajasthan, Mahima Group has successfully established 31
+          years of presence across the various verticals of infrastructural
+          development. With a firm existence for more than three decades in the
+          real estate sector of Rajasthan, Mahima Group has successfully
+          established 31 years of presence across the various verticals of
+          infrastructural development.
         </p>
         <a href="">
           <span className="">!join now</span>

@@ -3,9 +3,9 @@ import Contact from "../../Contact/Contact";
 import Banner from "../../Shared/Banner/Banner";
 import Design from "../Design/Design";
 import ServiceItems from "../../ServiceItems/ServiceItems";
-import Services from "../../Services/Services";
 import ReviewShows from "../../Review/ReviewShows/ReviewShows";
 import BannerDG from "./BannerDG/BannerDG";
+import ServicesSlice from "../../ServicesSlice/ServicesSlice";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <Design></Design>
       <ServiceItems></ServiceItems>
       <BannerDG></BannerDG>
-      <Services></Services>
+      <ServicesSlice></ServicesSlice>
       <Contact></Contact>
       <ReviewShows></ReviewShows>
     </div>

@@ -16,6 +16,7 @@ import PersonReview from "./Pages/Review/PersonReview/PersonReview";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Contact from "./Pages/Contact/Contact";
 import BannerDG from "./Pages/Home/Home/BannerDG/BannerDG";
+import ServicesSlice from "./Pages/ServicesSlice/ServicesSlice";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="/services">
               <Services />
+            </Route>
+            <Route path="/servicesSlice">
+              <ServicesSlice />
             </Route>
             <Route path="/contact">
               <Contact />

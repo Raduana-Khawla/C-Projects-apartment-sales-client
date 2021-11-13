@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+## Project topic:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Apartment sales
 
-## Available Scripts
+# Project Title:
 
-In the project directory, you can run:
+Noor Construction
 
-### `npm start`
+Live-site-link:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Project of Apartment Sales Website.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Description of Apartment Sales website:
+With a firm existence for more than three decades in the real estate sector of Rajasthan, Mahima Group has successfully established 31 years of presence across the various verticals of infrastructural development. Having completed and delivered 8 Million Sq. Ft of area, currently, the firm has 3.16 Million Sq. ft. under construction. We have delivered timeless quality in the commercial developments with the four most popular Commercial Complexes that have now turned into the landmarks of the city. Not only have we ruled the builder market of luxurious livings but also delivered refined living in the affordable range.
 
-### `npm test`
+# Five Bullet points mentioning different features and functionality of your website:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.How much does an apartment cost in Dhaka?
 
-### `npm run build`
+Cost of Living in Dhaka.
+Restaurants Edit
+Basic (Electricity, Heating, Cooling, Water, Garbage) for 915 sq ft Apartment 4,250.31৳
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.Is it good to invest in apartments?
+Investing in apartments is one of the best investment strategies for investors who want an additional source of monthly income with slow but steady appreciation in the value of their portfolio. When it comes to real estate, there are two main types of properties that one can invest in: single family and multifamily.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.Is owning apartments profitable?
+Owning apartments guarantees an income and reduces the risks of high vacancies. If you manage to rent out half of them, you can guarantee that your business is paying for itself. You can also make sure that your business is capable of maintaining mortgage payments.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4.Apartment Buildings for Sale
+Noor Construction has thousands of Apartment Building listings currently available for sale on LoopNet.com. Save this search.
+To find Apartment Buildings nearby you, try filtering by city, county or by neighborhood name.
 
-### `npm run eject`
+5.6 Benefits of Buying an Apartment
+Accessibility.
+Most reputed developer companies in Bangladesh build apartment complexes in well-developed areas that offer various educational, medical, recreational facilities nearby.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# project creating materials:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React Library,CSS,React Bootstrap,Bootstrap,Material UI,FontAwesome Icon,FontAwesome svg Icon, React-Router-Dom, Firebase,Firebase Google SignIn etc.

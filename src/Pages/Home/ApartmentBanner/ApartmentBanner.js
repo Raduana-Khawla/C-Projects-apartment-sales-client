@@ -40,19 +40,20 @@ const ApartmentBanner = () => {
               sx={{ mb: 5 }}
               style={{ color: "#5CE7ED" }}
             >
-              Apartment
+              Our Noor Constraction
             </Typography>
             <Typography variant="h4" style={{ color: "white" }}>
-              Make an Apartment Today
+              Apartment Buildings for Sale!
             </Typography>
             <Typography
               variant="h6"
               sx={{ my: 5 }}
               style={{ color: "white", fontSize: 14, fontWeight: 300 }}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              facere totam aliquam praesentium vel. Amet veniam odio vero
-              doloremque laborum.
+              Apartment Buildings for Sale Noor Construction has thousands of
+              Apartment Building listings currently available for sale on
+              LoopNet.com. Save this search. To find Apartment Buildings nearby
+              you, try filtering by city, county or by neighborhood name.
             </Typography>
             <Button variant="contained" style={{ backgroundColor: "#5CE7ED" }}>
               Learn More

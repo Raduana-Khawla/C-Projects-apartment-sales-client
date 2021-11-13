@@ -9,7 +9,7 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <section>
-      <div className="">
+      <div className="mt-5">
         <video
           autoPlay
           loop
@@ -28,9 +28,9 @@ const Banner = () => {
           <source src={banner} type="video/mp4" />
         </video>
       </div>
-      <div className="row my-3">
-        <div className="col-md-5 m-5">
-          <Carousel>
+      <div className="row my-5">
+        <div className="col-md-5">
+          <Carousel className="m-3 m-5">
             <Carousel.Item>
               <img
                 className="d-block item rounded"
@@ -46,10 +46,7 @@ const Banner = () => {
                 alt="Second slide"
               />
 
-              <Carousel.Caption>
-                {/* <h3>Family Care Dental Zone</h3>
-      <p>From Simple Procedures to complex Surgeries.</p> */}
-              </Carousel.Caption>
+              <Carousel.Caption></Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
@@ -62,11 +59,17 @@ const Banner = () => {
             </Carousel.Item>
           </Carousel>
         </div>
-        <div className="col-md-4 my-5 text-light">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          natus illum rem, fugit assumenda fugiat repellat nulla nobis
-          cupiditate mollitia quaerat reprehenderit, velit veniam molestiae
-          doloremque non atque accusantium repellendus.
+        <div className="col-md-4 banner">
+          With a firm existence for more than three decades in the real estate
+          sector of Rajasthan, Mahima Group has successfully established 31
+          years of presence across the various verticals of infrastructural
+          development. Having completed and delivered 8 Million Sq. Ft of area,
+          currently, the firm has 3.16 Million Sq. ft. under construction. We
+          have delivered timeless quality in the commercial developments with
+          the four most popular Commercial Complexes that have now turned into
+          the landmarks of the city. Not only have we ruled the builder market
+          of luxurious livings but also delivered refined living in the
+          affordable range.
         </div>
       </div>
     </section>

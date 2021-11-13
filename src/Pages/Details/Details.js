@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+import "./Details.css";
 
 const style = {
   position: "absolute",
@@ -36,10 +37,7 @@ const Details = () => {
     watch,
     formState: { errors },
   } = useForm();
-
-  // handleOpen=(data)=>{
   const onSubmit = (data) => {
-    // handleOpen();
     data.email = user?.email;
     data.status = "pending";
     fetch("http://localhost:5000/addOrders", {
@@ -61,6 +59,7 @@ const Details = () => {
 
   return (
     <>
+      <h1>Property Details</h1>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -83,16 +82,18 @@ const Details = () => {
           </Box>
         </Fade>
       </Modal>
-      <div>
-        <div className="details-container">
+      <div className="">
+        <div className="details-container my-3 background">
           <div className="row container">
             <div className="col-md-6">
-              <img className="w-50" src={service.imageURL} alt="" />
-              <p>{service?.description}</p>
-              <h1>{service?.name}</h1>
-              <h1> {service?.price}</h1>
+              <div className="card property1 rounded w-75 h-75 p-3 m-5">
+                <img className="w-100 h-50" src={service.imageURL} alt="" />
+                <h3>{service?.name}</h3>
+                <p>{service?.description}</p>
+                <h1>Price: {service?.price}</h1>
+              </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 my-5">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                   {...register("name")}

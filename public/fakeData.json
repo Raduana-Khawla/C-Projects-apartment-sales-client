@@ -3,61 +3,71 @@
         "id": "1",
         "name": "Sweet Family Home",
         "description": "Lovely! That was the word I said when I saw this sweet family home located in Scullsgate, just outside of London, England.",
-        "imageURL": "https://i.ibb.co/nMBBtF4/property1.jpg"
+        "imageURL": "https://i.ibb.co/nMBBtF4/property1.jpg",
+        "price": "45"
     },
     {
         "id": "2",
         "name": "Relaxation Apartment",
         "description": "Apartment Relax is located in Pluzine. Set on the beachfront, this property has a bar, a garden, barbecue facilities and free WiFi.",
-        "imageURL": "https://i.ibb.co/Pr48sGy/property2.jpg"
+        "imageURL": "https://i.ibb.co/Pr48sGy/property2.jpg",
+        "price": "50"
     },
     {
         "id": "3",
         "name": "Night Valley Apartment",
         "description": "Deluxe 2 bedroom apartment.This is a lovely,light and stylish 2 bedroom apartment located on the first floor.The apartment was completely renovated.",
-        "imageURL": " https://i.ibb.co/vkTgj2L/property3.jpg"
+        "imageURL": " https://i.ibb.co/vkTgj2L/property3.jpg",
+        "price": "60"
     },
     {
         "id": "4",
         "name": "Luxury Apartment",
         "description": "Penthouse Apartments: A penthouse apartment is a luxury apartment that is placed on the the top most floor of the building.",
-        "imageURL": "https://i.ibb.co/bL9wPqX/property4.jpg"
+        "imageURL": "https://i.ibb.co/bL9wPqX/property4.jpg",
+        "price": "70"
     },
     {
         "id": "5",
         "name": "Studio Apartments",
         "description": "Studios rents usually run several hundred dollars cheaper than 1-bedrooms, depending on square footage and luxury in question.",
-        "imageURL": "https://i.ibb.co/R9zJjqS/property101.jpg"
+        "imageURL": "https://i.ibb.co/R9zJjqS/property101.jpg",
+        "price": "55"
     },
     {
         "id": "6",
         "name": "Modern Luxury Apartments",
         "description": "Modern Luxury Apartment. Find ideas and inspiration for Modern Luxury Apartment to add to your own home.",
-        "imageURL": "https://i.ibb.co/ZTdnvYN/property9.jpg"
+        "imageURL": "https://i.ibb.co/ZTdnvYN/property9.jpg",
+        "price": "55"
     },
     {
         "id": "7",
         "name": "Heartfelt Homes",
         "description": "Heartfelt Homes is the passion of Amber Green, Realtor. Our goal is to help families achieve their dream of home ownership and give back to our community.",
-        "imageURL": "https://i.ibb.co/FwGxBqj/property61.jpg"
+        "imageURL": "https://i.ibb.co/FwGxBqj/property61.jpg",
+        "price": "65"
     },
     {
         "id": "8",
         "name": "Partnered Apartments",
         "description": "Find your new home at Ocean Shores Apartments located at 1209 Ocean St, Marshfield, MA 02050. Floor plans starting at $1463. Check availability now!",
-        "imageURL": "https://i.ibb.co/KDSqMC1/property8.jpg"
+        "imageURL": "https://i.ibb.co/KDSqMC1/property8.jpg",
+        "price": "80"
     },
     {
         "id": "9",
         "name": "Ocean Shores Apartments",
         "description": "As we mentioned, condominiums are complexes. They tend to have more than one high-rise building with each being more than ten stories high.",
-        "imageURL": "https://i.ibb.co/wC2XSV2/property51.jpg"
+        "imageURL": "https://i.ibb.co/wC2XSV2/property51.jpg",
+        "price": "85"
     },
     {
         "id": "10",
         "name": "Condominium Apartment",
         "description": "Finding an Apartment. Partners Healthcare does not offer employee or student housing. The following information will help you learn more about Boston-area.",
-        "imageURL": "https://i.ibb.co/cLtNYWK/property10.jpg"
+        "imageURL": "https://i.ibb.co/cLtNYWK/property10.jpg",
+        "price": "75"
     }
 ]
 

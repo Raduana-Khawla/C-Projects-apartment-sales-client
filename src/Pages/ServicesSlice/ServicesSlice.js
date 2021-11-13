@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Services.css";
 
-const Services = () => {
+const ServicesSlice = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch(`http://localhost:5000/allServices`)
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => setServices(data.slice(0, 6)));
   }, []);
   console.log(services);
   return (
@@ -62,4 +61,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSlice;

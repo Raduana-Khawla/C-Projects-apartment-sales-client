@@ -10,9 +10,9 @@ const ServiceItems = () => {
   }, []);
   console.log(serviceItems);
   return (
-    <div className="design1">
+    <div className="design1 mt-3">
       <div className="container">
-        <div className="text-center py-5">
+        <div className="text-center my-3">
           <span className="design4">OUR SERVICES</span>
           <h2>Our All Services</h2>
           <div className="row">
@@ -20,7 +20,7 @@ const ServiceItems = () => {
               <div className="col-md-4 col-sm-12">
                 <div className="card p-3 design2">
                   <img
-                    className="w-100 h-50 p-3"
+                    className="w-100 h-75 p-2"
                     src={pd?.imageURL}
                     alt="Images"
                   />
