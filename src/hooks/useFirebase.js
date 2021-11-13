@@ -49,7 +49,7 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
   const hanldeUserInfo = (email) => {
-    fetch("http://localhost:5000/addUserInfo", {
+    fetch("http://localhost:8000/addUserInfo", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),
@@ -103,7 +103,7 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
   // useEffect(() => {
-  //     fetch(`http://localhost:5000/users/${user.email}`)
+  //     fetch(`http://localhost:8000/users/${user.email}`)
   //         .then(res => res.json())
   //         .then(data => setAdmin(data.admin))
   // }, [user.email])

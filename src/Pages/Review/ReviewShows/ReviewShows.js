@@ -9,7 +9,7 @@ const ReviewShows = () => {
   const [reviews, setReviews] = useState([]);
   //loading data
   useEffect(() => {
-    fetch(`http://localhost:5000/addReview`)
+    fetch(`http://localhost:8000/addReview`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

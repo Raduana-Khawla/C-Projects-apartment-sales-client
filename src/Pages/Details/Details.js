@@ -40,7 +40,7 @@ const Details = () => {
   const onSubmit = (data) => {
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:5000/addOrders", {
+    fetch("http://localhost:8000/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -52,7 +52,7 @@ const Details = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleService/${serviceId}`)
+    fetch(`http://localhost:8000/singleService/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);

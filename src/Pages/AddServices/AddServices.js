@@ -14,7 +14,7 @@ const AddServices = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/addServices", {
+    fetch("http://localhost:8000/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

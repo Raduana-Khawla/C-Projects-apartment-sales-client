@@ -12,7 +12,7 @@ const BookingList = () => {
 
   console.log(status);
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("http://localhost:8000/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [control]);
@@ -25,7 +25,7 @@ const BookingList = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:5000/statusUpdate/${orderId}`, {
+    fetch(`http://localhost:8000/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -34,7 +34,7 @@ const BookingList = () => {
       .then((result) => console.log(result));
   };
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteOrder/${id}`, {
+    fetch(`http://localhost:8000/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

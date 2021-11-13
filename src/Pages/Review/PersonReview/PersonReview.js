@@ -6,7 +6,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Rating } from "@mui/material";
-import "./PersonReview";
+import "./PersonReview.css";
 
 const useStyles = makeStyles({
   card: {
@@ -32,12 +32,10 @@ const PersonReview = (props) => {
   const classes = useStyles();
   console.log(props);
   const { name, rating, Comments, img } = props.review;
+  console.log(rating);
   return (
     <Grid xs={4} sm={4} md={4} container>
-      <Card
-        className={classes.card}
-        sx={{ minWidth: 275, border: 0, m: 3, boxShadow: 0 }}
-      >
+      <Card className={classes.card}>
         <CardMedia
           component="img"
           style={{
@@ -59,8 +57,9 @@ const PersonReview = (props) => {
           <span className="style">
             <div className="col-span-9">
               <Rating
-                emptySymbol="far fa-star text-coral text-xl"
-                fullSymbol="fas fa-star text-coral text-xl"
+                initialRating={rating}
+                emptySymbol="far fa-star icon-star"
+                fullSymbol="fas fa-star icon-star"
               ></Rating>
             </div>
           </span>
