@@ -4,12 +4,6 @@
     margin-top: -50px;
     box-sizing: border-box;
     transition: 0.6s;
-    /* 
-    background-color: #FEF9EB;
-    padding: -20px 30px 30px;
-    margin-bottom: 30px;
-    display: block;
-     */
 }
 .item1:hover{
     box-shadow: 4px 4px 7px;

@@ -1,57 +1,63 @@
 [
     {
         "id": "1",
-        "name": "Duplex Layout",
-        "description": "An apartment with three floors can be referred to as a triplex.Strangely however, and rather confusingly, in the USA, a 'duplex' is a dwelling comprising two apartments with separate entrances, whether the apartments are side by side,or one above the other.",
-        "imageURL": "https://i.ibb.co/0YdwbWD/service1.jpg"
+        "name": "Sweet Family Home",
+        "description": "Lovely! That was the word I said when I saw this sweet family home located in Scullsgate, just outside of London, England.",
+        "imageURL": "https://i.ibb.co/nMBBtF4/property1.jpg"
     },
     {
         "id": "2",
-        "name": "Financial Reporting",
-        "description": "Financial reporting is a standard accounting practice that uses financial statements to disclose a company's financial information and performance over a particular period, usually on an annual or quarterly basis.",
-        "imageURL": "https://i.ibb.co/N7qnm2R/service2.jpg"
+        "name": "Relaxation Apartment",
+        "description": "Apartment Relax is located in Pluzine. Set on the beachfront, this property has a bar, a garden, barbecue facilities and free WiFi.",
+        "imageURL": "https://i.ibb.co/Pr48sGy/property2.jpg"
     },
     {
         "id": "3",
-        "name": "Best Quality",
-        "description": "The Top Quality Apartment is a modern and pleasant apartment for 6 People, placed in Foz da Ria Resort. Being the apartment within Foz da Ria Resort the guests will have access to all the facilities: its swimming pool, gym, sauna, jacuzzi, tenis court and subtropical garden.",
-        "imageURL": "https://i.ibb.co/r79KcLp/service3.jpg"
+        "name": "Night Valley Apartment",
+        "description": "Deluxe 2 bedroom apartment.This is a lovely,light and stylish 2 bedroom apartment located on the first floor.The apartment was completely renovated.",
+        "imageURL": " https://i.ibb.co/vkTgj2L/property3.jpg"
     },
     {
         "id": "4",
-        "name": "High-Level Security",
-        "description": "The system maintains a highly detailed access and authorization scheme defining Access control and system action. Documents are compartmentalized in the “silent Access control” method, namely the user sees only what he is allowed to see.",
-        "imageURL": "https://i.ibb.co/JrXjMyv/service4.jpg"
+        "name": "Luxury Apartment",
+        "description": "Penthouse Apartments: A penthouse apartment is a luxury apartment that is placed on the the top most floor of the building.",
+        "imageURL": "https://i.ibb.co/bL9wPqX/property4.jpg"
     },
     {
         "id": "5",
-        "name": "Large Playground",
-        "description": "From backyard playgrounds to kids' playsets, swing sets, slides and playhouses, we have the playground ... Shop our large selection of kids swing sets.Playground Outfitters offers a wide range of commercial playground.",
-        "imageURL": "https://i.ibb.co/4YCkNh1/service5.jpg"
+        "name": "Studio Apartments",
+        "description": "Studios rents usually run several hundred dollars cheaper than 1-bedrooms, depending on square footage and luxury in question.",
+        "imageURL": "https://i.ibb.co/R9zJjqS/property101.jpg"
     },
     {
         "id": "6",
-        "name": "Luxury Apartments",
-        "description": "Penthouse Apartments: A penthouse apartment is a luxury apartment that is placed on the the top most floor of the building. These apartments have beautiful views of the skyline and the landscape.",
-        "imageURL": "https://i.ibb.co/TcGqs2W/service6.jpg"
+        "name": "Modern Luxury Apartments",
+        "description": "Modern Luxury Apartment. Find ideas and inspiration for Modern Luxury Apartment to add to your own home.",
+        "imageURL": "https://i.ibb.co/ZTdnvYN/property9.jpg"
     },
     {
         "id": "7",
-        "name": "Good Neighborhood",
-        "description": "When Brad Whitman—local celebrity due to his HVAC commercials—moves his white, upper-class family to Oak Knell he sets off a chain of events that culminate in a tragedy. The Whitman family moves right next door to Valerie Aston-Holt and her son Xavier.",
-        "imageURL": "https://i.ibb.co/WkSw1rC/service7.jpg"
+        "name": "Heartfelt Homes",
+        "description": "Heartfelt Homes is the passion of Amber Green, Realtor. Our goal is to help families achieve their dream of home ownership and give back to our community.",
+        "imageURL": "https://i.ibb.co/FwGxBqj/property61.jpg"
     },
     {
         "id": "8",
-        "name": "Property Management",
-        "description": "Property management is the daily oversight of residential, commercial, or industrial real estate by a third-party contractor. Generally, property managers take responsibility for day-to-day repairs and ongoing maintenance, security, and upkeep of properties.",
-        "imageURL": "https://i.ibb.co/j3f6CGX/Real-estate-concept-House-rent-service-Modern-family-characters-rent-new-house-or-big-appartment.jpg"
+        "name": "Partnered Apartments",
+        "description": "Find your new home at Ocean Shores Apartments located at 1209 Ocean St, Marshfield, MA 02050. Floor plans starting at $1463. Check availability now!",
+        "imageURL": "https://i.ibb.co/KDSqMC1/property8.jpg"
     },
     {
         "id": "9",
-        "name": " Good Natural ",
-        "description": "The more sunlight a building harnesses, the less electricity it has to use. ... You can save money and lessen your environmental impact by living in an apartment with abundant natural light.",
-        "imageURL": "https://i.ibb.co/XLxq1Pd/service9.jpg"
+        "name": "Ocean Shores Apartments",
+        "description": "As we mentioned, condominiums are complexes. They tend to have more than one high-rise building with each being more than ten stories high.",
+        "imageURL": "https://i.ibb.co/wC2XSV2/property51.jpg"
+    },
+    {
+        "id": "10",
+        "name": "Condominium Apartment",
+        "description": "Finding an Apartment. Partners Healthcare does not offer employee or student housing. The following information will help you learn more about Boston-area.",
+        "imageURL": "https://i.ibb.co/cLtNYWK/property10.jpg"
     }
 ]
 

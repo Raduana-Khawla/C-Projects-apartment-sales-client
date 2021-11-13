@@ -12,42 +12,45 @@ const Design = () => {
         <div className="card w-25 h-50 item1 col-md-3">
           <div class="card-body text-center">
             <img src={design1} className="h-25 w-25" alt="" />
-            <h5 class="card-title">Special title treatment</h5>
+            <h5 class="card-title">Duplex Layout</h5>
             <p class="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
+              We have a lot of duplex and luxury rooms for you and you can
+              easily buy this.
             </p>
+            <a href="">Read More</a>
           </div>
         </div>
         <div className="card w-25 h-50 item1 col-md-3">
           <div className="card-body text-center">
             <img src={design12} className="h-50 w-25" alt="" />
-            <h5 className="card-title">Special title treatment</h5>
+            <h5 className="card-title">High-Level Security</h5>
             <p className="card-text">
               With supporting text below as a natural lead-in to additional
               content.
             </p>
+            <a href="">Read More</a>
           </div>
         </div>
-
         <div className="card w-25 h-50 item1 col-md-3">
           <div className="card-body text-center">
             <img src={design2} className="h-50 w-25" alt="" />
-            <h5 className="card-title">Special title treatment</h5>
+            <h5 className="card-title">Royal Touch Paint</h5>
             <p className="card-text">
               With supporting text below as a natural lead-in to additional
               content.
             </p>
+            <a href="">Read More</a>
           </div>
         </div>
         <div className="card w-25 h-50 item1 col-md-3">
           <div className="card-body text-center">
             <img src={design3} className="h-50 w-25" alt="" />
-            <h5 className="card-title">Special title treatment</h5>
+            <h5 className="card-title">Large Playground</h5>
             <p className="card-text">
               With supporting text below as a natural lead-in to additional
               content.
             </p>
+            <a href="">Read More</a>
           </div>
         </div>
       </div>

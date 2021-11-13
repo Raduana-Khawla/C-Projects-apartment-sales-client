@@ -1,13 +1,15 @@
 import React from "react";
+import ApartmentBanner from "../Home/ApartmentBanner/ApartmentBanner";
 import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="mt-5">
+    <div className="my-5">
+      <h1 className="alignment">Contact Us</h1>
       <div className="contact-container">
         <div className="contact">
-          <div className="row container">
-            <div className="col-md-6">
+          <div className="row mt-5">
+            <div className="col-md-5">
               <div className="login-form mt-5">
                 <form action="">
                   <input
@@ -36,13 +38,9 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <div className="col-md-6">
-              <div className="login-img">
-                <img
-                  className="w-100"
-                  src="https://i.ibb.co/FVMcnDp/undraw-contact-us-15o2.png"
-                  alt=""
-                />
+            <div className="col-md-7">
+              <div className="">
+                <ApartmentBanner></ApartmentBanner>
               </div>
             </div>
           </div>

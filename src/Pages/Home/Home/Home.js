@@ -4,8 +4,8 @@ import Banner from "../../Shared/Banner/Banner";
 import Design from "../Design/Design";
 import ServiceItems from "../../ServiceItems/ServiceItems";
 import Services from "../../Services/Services";
-import PersonReview from "../../Review/PersonReview/PersonReview";
 import ReviewShows from "../../Review/ReviewShows/ReviewShows";
+import BannerDG from "./BannerDG/BannerDG";
 
 const Home = () => {
   return (
@@ -14,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <Design></Design>
       <ServiceItems></ServiceItems>
+      <BannerDG></BannerDG>
       <Services></Services>
       <Contact></Contact>
       <ReviewShows></ReviewShows>

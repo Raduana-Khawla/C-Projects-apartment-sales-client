@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import PersonReview from "../PersonReview/PersonReview";
-import "./ReviewShows.css";
 
 const ReviewShows = () => {
   const [reviews, setReviews] = useState([]);
@@ -19,10 +18,10 @@ const ReviewShows = () => {
   }, []);
 
   return (
-    <Box sx={{ flexGrow: 1, bgcolor: "error.main", py: 5 }}>
+    <Box sx={{ flexGrow: 1, py: 5 }}>
       <Container>
         <Typography
-          sx={{ fontWeight: 500, m: 2, color: "white" }}
+          sx={{ fontWeight: 500, m: 2, color: "success.main" }}
           variant="h3"
           component="div"
         >
@@ -38,13 +37,16 @@ const ReviewShows = () => {
           REVIEWS
         </Typography>
         <Typography
-          sx={{ fontWeight: 70, m: 2, color: "white" }}
+          sx={{ fontWeight: 70, m: 2, color: "tomato" }}
           variant="h6"
           component="div"
         >
-          Here are our latest reviews from{" "}
-          <span className="text-white">allAgents</span>
+          Here are our latest reviews from allAgents
         </Typography>
+        <Typography sx={{ color: "success.main" }}>
+          You Also can give a Review.
+        </Typography>
+
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}

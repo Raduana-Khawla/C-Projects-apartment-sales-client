@@ -16,7 +16,7 @@ const MyBookings = () => {
     fetch(`http://localhost:5000/myOrder/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, [user?.email]);
+  }, [user?.email, control]);
   const handleOrderId = (id) => {
     setOrderId(id);
     console.log(id);

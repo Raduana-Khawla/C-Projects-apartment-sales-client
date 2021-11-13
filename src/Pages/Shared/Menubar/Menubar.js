@@ -45,6 +45,9 @@ const Menubar = () => {
             <Nav.Link as={HashLink} to="/services">
               <span id="color">Property</span>
             </Nav.Link>
+            <Nav.Link as={HashLink} to="/contact">
+              <span id="color">Contact Us</span>
+            </Nav.Link>
 
             <Nav.Link as={HashLink} to="/dashboard">
               <span id="color">

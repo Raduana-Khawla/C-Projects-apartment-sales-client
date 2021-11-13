@@ -2,89 +2,64 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
 
+// fetch("http://localhost:5000/allServices")
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allServices")
+    fetch("./fakeData.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   console.log(services);
   return (
-    // <div>
-    //   <h1>Services</h1>
-    //   <div className="services">
-    //     <div className="row container">
-    //       {services?.map((pd, index) => (
-    //         <div className="col-md-6 col-lg-4">
-    //           <div className="service p-3 border border m-2">
-    //             <div className="service-img">
-    //               <img className="w-50" src={pd?.imageURL} alt="" />
-    //             </div>
-    //             <h1>{pd.name}</h1>
-    //             <p>{pd.description}</p>
-    //             <p>{pd.price}</p>
-    //             <Link to={`/service/${pd._id}`}>
-    //               {" "}
-    //               <button className="btn btn-success">Order Now</button>
-    //             </Link>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </div>
-    <div class="container my-5">
-      <div class="section-title text-center">
-        <span class="sp-color-2">PROPERTY</span>
-        <h2>Our Property and Its Availabilities and All Other Details</h2>
-      </div>
-      <div class="row">
-        {services?.map((pd, index) => (
-          <div class="col-sm-12 col-md-4">
-            <div class="property-card">
-              <div class="property-card-img">
-                <a href="property-details.html">
-                  <img className="w-100" src={pd?.imageURL} alt="Images" />
-                </a>
-              </div>
-              <h4>
-                $<p>{pd.price}</p>/m
-              </h4>
-              <div class="content">
-                <h4>
-                  {pd.name}{" "}
-                  <span>
-                    <i class="bx bx-location-plus"></i>Dallas
-                  </span>{" "}
-                </h4>
-                <p>
-                  <small>{pd.description}</small>
-                </p>
-                <div className="d-flex">
-                  <ul>
+    <section className="bg mt-5">
+      <div className="container my-5">
+        <div className="section-title text-center">
+          <h5 className="text-white pt-3">PROPERTY</h5>
+          <h2>Our Property and Its Availabilities and All Other Details</h2>
+        </div>
+        <div className="row">
+          {services?.map((pd, index) => (
+            <div className="col-sm-12 col-md-4">
+              <div className="property1 card rounded p-3">
+                <div className="property-card-img">
+                  <a href="property-details.html">
+                    <img
+                      className="w-100 rounded"
+                      src={pd?.imageURL}
+                      alt="Images"
+                    />
+                  </a>
+                </div>
+                <h4 className="m-3">${pd.price}/m</h4>
+                <div className="content">
+                  <h4>{pd.name}</h4>
+                  <p>
+                    <small>{pd.description}</small>
+                  </p>
+                  <ul className="d-flex justify-content-between">
                     <li>Dining: 01</li>
                     <li>Sq. feet: 120</li>
                     <li>Bathroom: 03</li>
                   </ul>
-                  <ul>
+                  <ul className="d-flex justify-content-between">
                     <li>Garage: 01</li>
                     <li>Drawing: 03</li>
                     <li>Bathroom: 04</li>
                   </ul>
                 </div>
-              </div>
-              <div class="property-card-btn">
-                <Link to={`/service/${pd._id}`}>
-                  {" "}
-                  <button className="btn btn-success">Order Now</button>
-                </Link>
+                <div className="btn">
+                  <Link to={`/service/${pd._id}`}>
+                    {" "}
+                    <button className="btn btn-success">Order Now</button>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

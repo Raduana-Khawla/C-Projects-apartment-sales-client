@@ -8,11 +8,14 @@ import useAuth from "../../../hooks/useAuth";
 import ManageOrder from "../ManageOrder/ManageOrder";
 import AddServices from "../../AddServices/AddServices";
 import BookProperty from "../BookProperty/BookProperty";
+import Pay from "../Pay/Pay";
+import ManageProducts from "./ManageProducts/ManageProducts";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
   const { user } = useAuth();
   const [isAdmi, setIsAdmin] = useState(false);
+  const [isUser, setIsUser] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
@@ -22,6 +25,13 @@ const Dashbaord = () => {
           setIsAdmin(true);
         } else {
           setIsAdmin(false);
+        }
+        if (data[0]) {
+          setIsUser(true);
+          setIsAdmin(true);
+        } else {
+          setIsUser(false);
+          setIsAdmin(true);
         }
       });
   }, [user?.email]);
@@ -33,6 +43,7 @@ const Dashbaord = () => {
           <div className="col-md-3 ">
             <div className="dashboard">
               <h5>Dashboard</h5>
+              <li className="dashboard-menu mt-5">Orders list User</li>
               <Link to={`${url}/BookProperty`}>
                 <li className="dashboard-menu mt-5">Book</li>
               </Link>
@@ -41,22 +52,30 @@ const Dashbaord = () => {
                 <li className="dashboard-menu mt-5">Booking list</li>
               </Link>
 
+              <Link to={`${url}/Pay`}>
+                <li className="dashboard-menu mt-5">Pay</li>
+              </Link>
+
               <Link to={`${url}/review`}>
                 <li className="dashboard-menu mt-5">Review</li>
               </Link>
               {isAdmi && (
                 <div className="admin-dashboard">
-                  <li className="dashboard-menu mt-5">Orders list</li>
+                  <li className="dashboard-menu mt-5">Orders list Admin</li>
 
                   <Link to={`${url}/addServices`}>
                     <li className="dashboard-menu">Add Service</li>
+                  </Link>
+                  <Link to={`${url}/manageOrder`}>
+                    <li className="dashboard-menu">Manage All Orders</li>
                   </Link>
 
                   <Link to={`${url}/makeAdmin`}>
                     <li className="dashboard-menu">Make Admin</li>
                   </Link>
-                  <Link to={`${url}/manageOrder`}>
-                    <li className="dashboard-menu">Manage Orders</li>
+
+                  <Link to={`${url}/manageProducts`}>
+                    <li className="dashboard-menu">Manage Products</li>
                   </Link>
                 </div>
               )}
@@ -69,6 +88,9 @@ const Dashbaord = () => {
               </Route>
               <Route exact path={`${path}/review`}>
                 <Review></Review>
+              </Route>
+              <Route exact path={`${path}/Pay`}>
+                <Pay></Pay>
               </Route>
               <Route exact path={`${path}/BookingList`}>
                 <MyBookings></MyBookings>
@@ -84,6 +106,9 @@ const Dashbaord = () => {
               </Route>
               <Route exact path={`${path}/manageOrder`}>
                 <ManageOrder></ManageOrder>
+              </Route>
+              <Route exact path={`${path}/manageProducts`}>
+                <ManageProducts></ManageProducts>
               </Route>
             </Switch>
           </div>

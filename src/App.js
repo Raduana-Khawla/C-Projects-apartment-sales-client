@@ -13,6 +13,9 @@ import Services from "./Pages/Services/Services";
 import AddServices from "./Pages/AddServices/AddServices";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import PersonReview from "./Pages/Review/PersonReview/PersonReview";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import Contact from "./Pages/Contact/Contact";
+import BannerDG from "./Pages/Home/Home/BannerDG/BannerDG";
 
 function App() {
   return (
@@ -36,18 +39,24 @@ function App() {
             <Route path="/services">
               <Services />
             </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/bannerDG">
+              <BannerDG />
+            </Route>
             <Route path="/personReview">
               <PersonReview></PersonReview>
             </Route>
-            <Route path="/service/:serviceId">
+            <PrivateRoute path="/service/:serviceId">
               <Details></Details>
-            </Route>
+            </PrivateRoute>
             <Route path="/addServices">
               <AddServices></AddServices>
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
