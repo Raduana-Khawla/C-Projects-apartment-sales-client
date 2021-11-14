@@ -5,7 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Rating } from "@mui/material";
+import Rating from "react-rating";
 import "./PersonReview.css";
 
 const useStyles = makeStyles({
@@ -60,6 +60,7 @@ const PersonReview = (props) => {
                 initialRating={rating}
                 emptySymbol="far fa-star icon-star"
                 fullSymbol="fas fa-star icon-star"
+                readonly
               ></Rating>
             </div>
           </span>

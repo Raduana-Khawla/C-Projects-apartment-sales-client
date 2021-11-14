@@ -5,6 +5,7 @@ import useAuth from "../../hooks/useAuth";
 const Review = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const { user } = useAuth();
+
   const onSubmit = (data) => {
     fetch("http://localhost:8000/addReview", {
       method: "POST",
@@ -12,10 +13,13 @@ const Review = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => {
+        alert("Review Done!");
+      });
 
     console.log(data);
   };
+
   return (
     <div>
       <h1>Review</h1>
@@ -26,6 +30,13 @@ const Review = () => {
           value={user?.email}
           type="email"
           {...register("email", { required: true })}
+        />
+        <br />
+        <input
+          className="input-field"
+          name="img"
+          value={user?.photoURL}
+          {...register("img", { required: true })}
         />
         <br />
         <input
@@ -46,7 +57,7 @@ const Review = () => {
         <input
           className="submit-btn btn btn-danger mt-3"
           type="submit"
-          value="Register"
+          value="Review"
         />
       </form>
     </div>

@@ -25,7 +25,7 @@ const MangeOrder = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:8000/statusUpdate/${orderId}`, {
+    fetch("http://localhost:8000/statusUpdate/${orderId}", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -34,7 +34,7 @@ const MangeOrder = () => {
       .then((result) => console.log(result));
   };
   const handleDelete = (id) => {
-    fetch(`http://localhost:8000/deleteOrder/${id}`, {
+    fetch("http://localhost:8000/deleteOrder/${id}", {
       method: "DELETE",
     })
       .then((res) => res.json())

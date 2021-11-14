@@ -52,7 +52,7 @@ const Details = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8000/singleService/${serviceId}`)
+    fetch("http://localhost:8000/singleService/${serviceId}")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);

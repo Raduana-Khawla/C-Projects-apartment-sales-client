@@ -103,7 +103,7 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
   // useEffect(() => {
-  //     fetch(`http://localhost:8000/users/${user.email}`)
+  //     fetch("http://localhost:8000/users/${user.email}")
   //         .then(res => res.json())
   //         .then(data => setAdmin(data.admin))
   // }, [user.email])

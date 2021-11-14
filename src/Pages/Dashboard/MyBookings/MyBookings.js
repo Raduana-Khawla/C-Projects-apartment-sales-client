@@ -13,7 +13,7 @@ const MyBookings = () => {
   const { register, handleSubmit } = useForm();
 
   useEffect(() => {
-    fetch(`http://localhost:8000/myOrder/${user?.email}`)
+    fetch("http://localhost:8000/myOrder/${user?.email}")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [user?.email, control]);
@@ -24,7 +24,7 @@ const MyBookings = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:8000/statusUpdate/${orderId}`, {
+    fetch("http://localhost:8000/statusUpdate/${orderId}", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -33,7 +33,7 @@ const MyBookings = () => {
       .then((result) => console.log(result));
   };
   const handleDelete = (id) => {
-    fetch(`http://localhost:8000/deleteOrder/${id}`, {
+    fetch("http://localhost:8000/deleteOrder/${id}", {
       method: "DELETE",
     })
       .then((res) => res.json())
