@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 
 const ServicesSlice = () => {
   const [services, setServices] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:8000/allServices")
       .then((res) => res.json())
       .then((data) => setServices(data.slice(0, 6)));
   }, []);
   console.log(services);
+
   return (
     <section className="bg mt-5">
       <div className="container my-5">

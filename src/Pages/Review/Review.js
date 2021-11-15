@@ -21,7 +21,7 @@ const Review = () => {
   };
 
   return (
-    <div>
+    <div className="bg my-5 p-5">
       <h1>Review</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input

@@ -24,7 +24,7 @@ const AddServices = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div className="bg my-5 p-5">
       <div>
         <h1 className="mt-5 text-center text-danger">Please Add Services</h1>
         <div className=" w-25 m-auto mt-5">

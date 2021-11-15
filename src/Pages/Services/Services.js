@@ -4,18 +4,20 @@ import "./Services.css";
 
 const Services = () => {
   const [services, setServices] = useState([]);
+
   useEffect(() => {
     fetch(`http://localhost:8000/allServices`)
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
   console.log(services);
+
   return (
     <section className="bg mt-5">
       <div className="container my-5">
         <div className="section-title text-center">
           <h5 className="text-white pt-3">PROPERTY</h5>
-          <h2>Our Property and Its Availabilities and All Other Details</h2>
+          <h2>Our Property and Its Availabilities</h2>
         </div>
         <div className="row">
           {services?.map((pd, index) => (

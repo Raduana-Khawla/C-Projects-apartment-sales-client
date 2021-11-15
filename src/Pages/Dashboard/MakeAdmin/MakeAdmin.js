@@ -23,8 +23,9 @@ const MakeAdmin = () => {
     console.log(data);
   };
   return (
-    <div>
-      <h1>make admin</h1>
+    <div className="bg my-5 p-5">
+      <h1>Make an Admin</h1>
+      <h6>Admin can make an Admin.He\She has the power</h6>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-field"

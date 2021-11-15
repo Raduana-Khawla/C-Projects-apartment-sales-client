@@ -13,6 +13,7 @@ const BookProperty = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    console.log(data);
     fetch("http://localhost:8000/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -23,7 +24,7 @@ const BookProperty = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div className="bg my-5 p-5">
       <div>
         <h1 className="mt-5 text-center text-danger">Please Add Services</h1>
         <div className=" w-25 m-auto mt-5">

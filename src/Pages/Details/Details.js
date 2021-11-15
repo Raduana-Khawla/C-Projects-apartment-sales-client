@@ -2,12 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
-import "./Details.css";
 
 const style = {
   position: "absolute",
@@ -22,10 +16,6 @@ const style = {
 };
 
 const Details = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
   const [service, setService] = useState({});
   const { user } = useAuth();
   const { serviceId } = useParams();
@@ -46,13 +36,15 @@ const Details = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
-    // setOpen(true);
+      .then((result) => {
+        console.log(result);
+        alert("Ordered Successfully!");
+      });
     console.log(data);
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/singleService/${serviceId}")
+    fetch(`http://localhost:8000/singleService/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
@@ -60,28 +52,6 @@ const Details = () => {
   return (
     <>
       <h1>Property Details</h1>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-          <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Added Successfully!
-            </Typography>
-          </Box>
-        </Fade>
-      </Modal>
       <div className="">
         <div className="details-container my-3 background">
           <div className="row container">

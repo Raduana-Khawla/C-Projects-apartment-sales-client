@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
-const MangeOrder = () => {
+const ManageOrder = () => {
   const [orders, setOrders] = useState([]);
   const [status, setStatus] = useState("");
   const [orderId, setOrderId] = useState("");
@@ -12,7 +12,7 @@ const MangeOrder = () => {
 
   console.log(status);
   useEffect(() => {
-    fetch("http://localhost:8000/allOrders")
+    fetch("http://localhost:8000/allServices")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [control]);
@@ -25,7 +25,7 @@ const MangeOrder = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch("http://localhost:8000/statusUpdate/${orderId}", {
+    fetch(`http://localhost:8000/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -34,7 +34,7 @@ const MangeOrder = () => {
       .then((result) => console.log(result));
   };
   const handleDelete = (id) => {
-    fetch("http://localhost:8000/deleteOrder/${id}", {
+    fetch(`http://localhost:8000/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -100,4 +100,4 @@ const MangeOrder = () => {
   );
 };
 
-export default MangeOrder;
+export default ManageOrder;
