@@ -10,9 +10,23 @@ const ManageOrder = () => {
 
   const { register, handleSubmit } = useForm();
 
-  console.log(status);
+  const handleStatus = (e) => {
+    setStatus(e.target.value);
+  };
+  const handleUpdate = (id) => {
+    fetch(`http://localhost:8000/statusUpdate/${orderId}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ status }),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        alert("status update Successfully!");
+        console.log(result);
+      });
+  };
   useEffect(() => {
-    fetch("http://localhost:8000/allServices")
+    fetch("http://localhost:8000/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [control]);
@@ -20,25 +34,30 @@ const ManageOrder = () => {
   // const status = "apporved";
   const handleOrderId = (id) => {
     setOrderId(id);
-    console.log(id);
+    // console.log(id);
   };
 
   const onSubmit = (data) => {
-    console.log(data, orderId);
+    // console.log(data, orderId);
     fetch(`http://localhost:8000/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => {
+        alert("status update Successfully!");
+        console.log(result);
+      });
   };
+
   const handleDelete = (id) => {
     fetch(`http://localhost:8000/deleteOrder/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
+        alert("Deleted successfully!");
         if (data.deletedCount) {
           setControl(!control);
         }
@@ -79,6 +98,11 @@ const ManageOrder = () => {
                   </select>
                   <input type="submit" />
                 </form>
+                <input
+                  onChange={handleStatus}
+                  type="text"
+                  defaultValue={pd.status}
+                />
               </td>
               <button
                 onClick={() => handleDelete(pd?._id)}
@@ -86,8 +110,9 @@ const ManageOrder = () => {
               >
                 Delete
               </button>
+
               <button
-                onSubmit={handleSubmit(onSubmit)}
+                onClick={() => handleUpdate(pd._id)}
                 className="btn bg-success p-2"
               >
                 Update

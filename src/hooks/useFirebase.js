@@ -74,7 +74,7 @@ const useFirebase = () => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        const user = result.user;
+        // const user = result.user;
         setAuthError("");
         const destination = location?.state?.from || "/";
         history.replace(destination);
@@ -96,13 +96,7 @@ const useFirebase = () => {
       setIsLoading(false);
     });
     return () => unsubscribed;
-  }, []);
-  // useEffect(() => {
-  //     fetch(`http://localhost:8000/users/${user.email}`)
-  //         .then(res => res.json())
-  //         .then(data => setAdmin(data.admin))
-  // }, [user.email])
-
+  }, [auth]);
   const logout = () => {
     setIsLoading(true);
     signOut(auth)

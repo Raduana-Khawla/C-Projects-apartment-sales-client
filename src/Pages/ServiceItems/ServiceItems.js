@@ -4,7 +4,7 @@ import "./ServiceItems.css";
 const ServiceItems = () => {
   const [serviceItems, setServiceItems] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8000/allServiceItems")
+    fetch("https://whispering-everglades-50086.herokuapp.com/allServiceItems")
       .then((res) => res.json())
       .then((data) => setServiceItems(data));
   }, []);

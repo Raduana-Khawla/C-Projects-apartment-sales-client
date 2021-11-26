@@ -3,34 +3,21 @@ import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
 const Details = () => {
   const [service, setService] = useState({});
   const { user } = useAuth();
   const { serviceId } = useParams();
-  console.log(serviceId);
 
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:8000/addOrders", {
+    fetch("https://whispering-everglades-50086.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -44,15 +31,17 @@ const Details = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8000/singleService/${serviceId}`)
+    fetch(
+      `https://whispering-everglades-50086.herokuapp.com/singleService/${serviceId}`
+    )
       .then((res) => res.json())
       .then((data) => setService(data));
-  }, []);
+  }, [serviceId]);
 
   return (
     <>
       <h1>Property Details</h1>
-      <div className="">
+      <div className="bg my-3 p-5">
         <div className="details-container my-3 background">
           <div className="row container">
             <div className="col-md-6">
@@ -78,13 +67,13 @@ const Details = () => {
                   className="p-2 m-2 w-100 input-field"
                 />
                 <input
-                  {...register("image", { required: true })}
+                  {...register("image")}
                   placeholder="Image Link"
                   defaultValue={service?.imageURL}
                   className="p-2 m-2 w-100 input-field"
                 />
                 <input
-                  {...register("price", { required: true })}
+                  {...register("price")}
                   placeholder="Price"
                   defaultValue={service?.price}
                   type="number"
@@ -96,7 +85,6 @@ const Details = () => {
                   <option value="business">business</option>
                 </select>
                 <br />
-                {/* <Alert severity="success">Added successfully!</Alert> */}
                 {errors.exampleRequired && <span>This field is required</span>}
                 <input
                   type="submit"

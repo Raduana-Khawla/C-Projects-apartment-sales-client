@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 const PersonReview = (props) => {
   const classes = useStyles();
   console.log(props);
-  const { name, rating, Comments, img } = props.review;
+  const { name, rating, comments, img } = props.review;
   console.log(rating);
   return (
     <Grid xs={4} sm={4} md={4} container>
@@ -52,7 +52,7 @@ const PersonReview = (props) => {
             {name}
           </Typography>
           <Typography variant="body2" color="white">
-            {Comments}
+            {comments}
           </Typography>
           <span className="style">
             <div className="col-span-9">

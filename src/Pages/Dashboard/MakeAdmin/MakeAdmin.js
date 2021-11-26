@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { Alert } from "@mui/material";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 const MakeAdmin = () => {
-  const [success, setSuccess] = useState(false);
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:8000/makeAdmin", {
+    fetch("https://whispering-everglades-50086.herokuapp.com/makeAdmin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -15,12 +13,10 @@ const MakeAdmin = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.modifiedCount) {
+          alert("Make admin successfully!");
           console.log(result);
-          setSuccess(true);
         }
       });
-
-    console.log(data);
   };
   return (
     <div className="bg my-5 p-5">
@@ -42,7 +38,6 @@ const MakeAdmin = () => {
           value="make as Admin"
         />
       </form>
-      {success && <Alert severity="success">Made Admin successfully!</Alert>}
     </div>
   );
 };

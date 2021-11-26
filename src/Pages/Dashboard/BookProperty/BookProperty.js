@@ -1,20 +1,17 @@
 import React from "react";
 import "./BookProperty.css";
 import { useForm } from "react-hook-form";
-import useAuth from "../../../hooks/useAuth";
 
 const BookProperty = () => {
-  const { user } = useAuth();
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:8000/addServices", {
+    fetch("https://whispering-everglades-50086.herokuapp.com/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

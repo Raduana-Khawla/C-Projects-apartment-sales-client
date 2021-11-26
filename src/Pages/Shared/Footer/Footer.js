@@ -8,7 +8,6 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import {
-  faCoffee,
   faPhoneVolume,
   faMapMarkedAlt,
 } from "@fortawesome/free-solid-svg-icons";
